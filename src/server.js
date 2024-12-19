@@ -18,7 +18,7 @@ const __dirname = dirname(__fileName);
 app.use(express.json());
 
 app.use("/auth", authRouter);
-app.use("/todos", authMiddleware, todosRouter);
+app.use("/todos", authMiddleware, todosRouter); //Protected routes
 
 // Makes directory path to be outside of src folder
 app.use(express.static(path.join(__dirname, "../public")));
